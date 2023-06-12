@@ -20,16 +20,17 @@ a {
   align-items: center;
   justify-content: center;
   left: 116px;
+  font-family: "Poppins";
   font-weight: 550;
   place-items: center;
   font-weight: 500;
+  
   width: 260px;
-
   height: 74px;
   font-style: normal;
   font-size: 15px;
   line-height: 40px;
-  color: rgba(62, 144, 126, 0.97);
+  color: #55847a;
   text-decoration: inherit;
 }
 a:hover {
@@ -60,7 +61,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #ffffff;
+  border-color: #7200006f;
 }
 button:focus,
 button:focus-visible {

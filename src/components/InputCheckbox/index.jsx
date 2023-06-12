@@ -1,6 +1,6 @@
 import { PropTypes } from "prop-types";
 
-const InputCheckbox = (nome, concluida, onChange) => {
+const InputCheckbox = (props) => {
   InputCheckbox.propTypes = {
     nome: PropTypes.string,
     concluida: PropTypes.bollean,
@@ -13,7 +13,9 @@ const InputCheckbox = (nome, concluida, onChange) => {
       id={nome}
       defaultChecked={concluida}
       onChange={(e) => onChange(e.target.value)}
-    />
+    >
+      {nome}
+    </input>
   );
 };
 export { InputCheckbox };

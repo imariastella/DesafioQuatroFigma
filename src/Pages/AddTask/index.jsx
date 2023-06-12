@@ -1,21 +1,21 @@
-import { InputForm } from "../../components/InputForm";
-import { Link } from "react-router-dom";
+import { AddTaskForm } from "../../components/AddTaskForm";
 import { styled } from "styled-components";
 
-const Login = () => {
+const AddTask = () => {
   return (
     <>
-      <Text>Welcome Back!</Text>
+      <Text>Welcome Onboard!</Text>
       <img></img>
-      <InputForm />
-      <Link>Forgot Password ?</Link>
-      <TextNormal>Dont have an acconunt ? </TextNormal>
-      <a>Sing Up</a>
+      <TextNormal>Add What your want to do later on...</TextNormal>
+      <AddTaskForm
+        name="newTask"
+        placeholder="Digite a nova tarefa"
+      ></AddTaskForm>
     </>
   );
 };
 
-export { Login };
+export { AddTask };
 
 const Text = styled.h1`
   display: inline-block;
@@ -28,8 +28,10 @@ const Text = styled.h1`
   left: 116px;
   font-size: 40px;
   line-height: 40px;
+  font-family: "Poppins";
 `;
 const TextNormal = styled.p`
   color: #176456;
   font-weight: 500;
+  font-size: 20px;
 `;

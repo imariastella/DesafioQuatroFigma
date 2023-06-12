@@ -1,7 +1,6 @@
-import { useNavigate } from "react-router-dom";
-import { InputCheckbox } from "../../../components/InputCheckbox";
 import { useState } from "react";
-import { AddTaskForm } from "../../../components/AddTaskForm";
+import { useNavigate } from "react-router-dom";
+import { InputCheckbox } from "../../components/InputCheckbox";
 import { styled } from "styled-components";
 
 const TodoTask = () => {
@@ -29,12 +28,12 @@ const TodoTask = () => {
       )
     );
   };
-  const handleAddTask = (nome) => {
-    setTarefas([...tarefas, { nome: nome, concluida: false }]);
-  };
+
   return (
     <>
+      <img></img>
       <Text>Welcome email do usuário</Text>
+      <img></img>
       <TextNormal>Todo Task</TextNormal>
       <Button onClick={handlePush} type="submit">
         +
@@ -48,7 +47,6 @@ const TodoTask = () => {
           onChange={handleChangeTask}
         />
       ))}
-      <AddTaskForm handleAddTask={handleAddTask} />
     </>
   );
 };

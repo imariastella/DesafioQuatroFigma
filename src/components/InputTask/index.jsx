@@ -3,8 +3,8 @@ import { styled } from "styled-components";
 const InputTask = () => {
   return (
     <StyleForm>
-      <StyleInputTask type="text"  />
-      <StyleInputTask type="text"  />
+      <StyleInputTask type="text" />
+      <StyleInputTask type="text" />
     </StyleForm>
   );
 };

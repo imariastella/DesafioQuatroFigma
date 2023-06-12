@@ -1,26 +1,48 @@
 import { PropTypes } from "prop-types";
 import { styled } from "styled-components";
+import { useTasksStore } from "../../stores/task";
+import { useNavigate } from "react-router-dom";
 
-const AddTaskForm = ({ handleAddTask }) => {
+const AddTaskForm = () => {
   AddTaskForm.propTypes = {
     handleAddTask: PropTypes.func,
   };
+  const navigate = useNavigate();
+  const { addTasks } = useTasksStore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleAddTask(e.target.newTask.value);
+
+    const task1 = {
+      name: e.target.task1.value,
+      completed: false,
+    };
+
+    const task2 = {
+      name: e.target.task2.value,
+      completed: false,
+    };
+
+    const task3 = {
+      name: e.target.task3.value,
+      completed: false,
+    };
+
+    addTasks([task1, task2, task3]);
+    navigate("/todotask");
   };
+
   return (
     <div>
       <StyleForm onSubmit={handleSubmit}>
-        <StyleInput name="newTask"></StyleInput>
-        <StyleInput name="newTask"></StyleInput>
-        <StyleInput name="newTask"></StyleInput>
+        <StyleInput name="task1"></StyleInput>
+        <StyleInput name="task2"></StyleInput>
+        <StyleInput name="task3"></StyleInput>
+        <button type="submit">Add Task</button>
       </StyleForm>
     </div>
   );
 };
-
 export { AddTaskForm };
 
 const StyleForm = styled.form`
@@ -40,6 +62,7 @@ const StyleInput = styled.input`
   width: 300px;
   border: 1px solid transparent;
   border-radius: 11px;
+  color: #000000;
   background-color: #ffffff;
   font-size: 13px;
   font-weight: 500;

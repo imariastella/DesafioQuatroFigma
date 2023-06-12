@@ -1,4 +1,4 @@
-import { MyRoutes } from "../routes";
+import { MyRoutes } from "./routes";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 
@@ -6,7 +6,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <MyRoutes/>
+        <MyRoutes />
       </div>
     </BrowserRouter>
   );
